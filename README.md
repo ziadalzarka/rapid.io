@@ -63,34 +63,43 @@ Another example:
 
 ### Blocks may be used multiple times with different variables
 
-Blocks are the most fundmental building block of a ZONE API and one block can be used multiple times with different configurations, for example:
+Blocks are the most fundmental building block of the Chain and one block can be used multiple times with different configurations, for example:
 
 > A validation middleware block may be used to build different endpoints and configured with different models.
 
-### All block linkers are optional
+### All block injections are optional
 
-If a linker was not able to find the target block, the main block must implement a way to gracefully handle the missing link.
+If the injector was not able to find the target block, the main block must implement a way to gracefully handle the missing dependency.
 
 ## Four Principles
 
 ### Endpoints
 
-An API main building block is an endpoint. An endpoint can be designed to do many things.
+Chain's last building block is an endpoint. An endpoint can be designed to do many things. Example endpoints:
+
+- Create
+- Read
+- Update
+- Delete
+- Paginate
 
 ### Middlewares
 
-Each endpoint consists of a set of middlewares. Example middlewares:
+Endpoints can have a parent of type Middleware back in the chain. Example middlewares:
+
 - Body validation
 - Error handling
 - Authentication
 
 ### Models
 
-Models are data schemas and can:
+Models are data schemas:
 
 - Control the data stored in the database.
 - Generate schemas to be used for request body validation.
-- Have special properties like `@Exclude` and `@Transform`.
+- Serialize data for response
+  > e.g. Removing password from user object
+
 
 ### Utils
 
