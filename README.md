@@ -1,16 +1,40 @@
 # RAPID.IO
 
+Making Back End development faster, much more scalable, easier and with the least amount of boilerplate code.
+
 ## Core Concepts
+
+### The Chain
+
+Set of Blocks connected together horizontally and vertically to form a bigger structure which is the API.
+
+For example, the diagram image below is a basic chain constructing an API with the following features:
+
+1. Increase a counter by +1 by inserting a new document into the database containing user's `name` and `date` of insertion.
+2. Count the documents inserted.
+3. Log each count into the console or logfile using a `Logger` util which can be a wrapper for `winston` or native `console`.
+4. Handle errors
+
+![diagram](https://raw.githubusercontent.com/ziadalzarka/rapid.io/master/diagram.jpg)
+
+> Each reactangle is a Block.
 
 ### Blocks
 
-Blocks are pieces of code designed to add more functionality to a larger system. They take a configuration object to construct an Endpoint, Middleware, Model or a Util. Each block is a node module and has its own `package.json`.
+Rapid.io is more similar to React that Angular and NestJS in that it does not provide any built-in Blocks or implement any helpers like the HTTP client in Angular or Pipes in NestJS. You can create a Block to wrap an external library and inject it into another Block.
+
+Features:
+
+- Blocks are pieces of code designed to be chained together to form a bigger structure called the **Chain**.
+- Each block is a node module and has its own `package.json`.
+- Each block is instantiated one or more times with a different Injection Token each time.
+- Each block can be injected to any other block and has its own unique Injection Token which can be manually set for simplicity.
 
 ### Blocks may communicate with each other
 
-A linker is what connects two blocks together, for example:
+Blocks can be injected into other Blocks classes, for example:
 
-> An authentication middleware may conenct to a User model.
+> An authentication middleware may inject a User Model to lookup the user and validate privilages.
 
 Another example:
 
