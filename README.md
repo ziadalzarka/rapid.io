@@ -2,6 +2,17 @@
 
 Making Back End development faster, much more scalable, easier and with the least amount of boilerplate code.
 
+## Contents
+
+- [Core Concepts](#core-concepts)
+  - [The Chain](#the-chain)
+  - [Blocks](#blocks)
+- [Four Principles](#four-principles)
+  - [Endpoints](#endpoints)
+  - [Middlewares](#middlewares)
+  - [Models](#models)
+  - [Utils](#utils)
+
 ## Core Concepts
 
 ### The Chain
@@ -21,11 +32,11 @@ For example, the diagram image below is a basic chain constructing an API with t
 
 ### Blocks
 
-Rapid.io is more similar to React that Angular and NestJS in that it does not provide any built-in Blocks or implement any helpers like the HTTP client in Angular or Pipes in NestJS. You can create a Block to wrap an external library and inject it into another Block.
+Rapid.io is more similar to React than Angular and NestJS in that it does not provide any built-in Blocks or implement any helpers like the HTTP client in Angular or Pipes in NestJS. You can create a Block to wrap an external library and inject it into another Block.
 
 Features:
 
-- Blocks are pieces of code designed to be chained together to form a bigger structure called the **Chain**.
+- Blocks are pieces of code designed to be chained together to form a bigger structure called **The Chain**.
 - Each block is a node module and has its own `package.json`.
 - Each block is instantiated one or more times with a different Injection Token each time.
 - Each block can be injected to any other block and has its own unique Injection Token which can be manually set for simplicity.
@@ -35,10 +46,6 @@ Features:
 Blocks can be injected into other Blocks classes, for example:
 
 > An authentication middleware may inject a User Model to lookup the user and validate privilages.
-
-Another example:
-
-> A middleware that creates a Book may need to connect to the Book model and connect to a Logger util to print out logs.
 
 Another example:
 
@@ -63,7 +70,7 @@ Another example:
 
 ### Blocks may be used multiple times with different variables
 
-Blocks are the most fundmental building block of the Chain and one block can be used multiple times with different configurations, for example:
+Blocks are the most fundmental building block of The Chain and one block can be used multiple times with different configurations, for example:
 
 > A validation middleware block may be used to build different endpoints and configured with different models.
 
