@@ -1,0 +1,16 @@
+{
+  "name": "zone.io",
+  "version": "1.0.0",
+  "description": "Zone.io is a library that builds APIs from yaml files",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziadalzarka/zone.io.git"
+  },
+  "author": "Ziad Alzarka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ziadalzarka/zone.io/issues"
+  },
+  "homepage": "https://github.com/ziadalzarka/zone.io#readme"
+}

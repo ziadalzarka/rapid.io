@@ -1,4 +1,4 @@
-# ZONE
+# ZONE.IO
 
 ## Core Concepts
 
