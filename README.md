@@ -1,4 +1,4 @@
-# ZONE.IO
+# RAPID.IO
 
 ## Core Concepts
 
