@@ -1,16 +1,16 @@
 {
-  "name": "zone.io",
+  "name": "rapid.io",
   "version": "1.0.0",
-  "description": "Zone.io is a library that builds APIs from yaml files",
+  "description": "rapid.io is a library that builds performant, scalable APIs from smaller building blocks",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ziadalzarka/zone.io.git"
+    "url": "git+https://github.com/ziadalzarka/rapid.io.git"
   },
   "author": "Ziad Alzarka",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ziadalzarka/zone.io/issues"
+    "url": "https://github.com/ziadalzarka/rapid.io/issues"
   },
-  "homepage": "https://github.com/ziadalzarka/zone.io#readme"
+  "homepage": "https://github.com/ziadalzarka/rapid.io#readme"
 }
