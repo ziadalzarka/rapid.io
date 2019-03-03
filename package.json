@@ -1,5 +1,5 @@
 {
-  "name": "rapid.io",
+  "name": "@rapid.io/core",
   "version": "1.0.0",
   "description": "rapid.io is a library that builds performant, scalable APIs from smaller building blocks",
   "main": "index.js",
@@ -7,10 +7,29 @@
     "type": "git",
     "url": "git+https://github.com/ziadalzarka/rapid.io.git"
   },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rimraf lib",
+    "test": "jest --config jest.config.json",
+    "test:watch": "jest --watch --config jest.config.json",
+    "prepare": "npm run clean && npm run build",
+    "prepublishOnly": "npm test"
+  },
   "author": "Ziad Alzarka",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ziadalzarka/rapid.io/issues"
   },
-  "homepage": "https://github.com/ziadalzarka/rapid.io#readme"
+  "homepage": "https://github.com/ziadalzarka/rapid.io#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.9",
+    "@types/node": "^11.10.4",
+    "jest": "^24.1.0",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.2",
+    "tsc": "^1.20150623.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "^3.3.3333"
+  }
 }
