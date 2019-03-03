@@ -15,6 +15,7 @@
     "prepare": "npm run clean && npm run build",
     "prepublishOnly": "npm test"
   },
+  "private": false,
   "author": "Ziad Alzarka",
   "license": "ISC",
   "bugs": {
