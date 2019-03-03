@@ -82,7 +82,7 @@ If the injector was not able to find the target block, the main block must imple
 
 ### Endpoints
 
-Chain's last building block is an endpoint. An endpoint can be designed to do many things. Example endpoints:
+The Chain's last building block is an endpoint. An endpoint can be designed to do many things. Example endpoints:
 
 - Create
 - Read
@@ -92,7 +92,7 @@ Chain's last building block is an endpoint. An endpoint can be designed to do ma
 
 ### Middlewares
 
-Endpoints can have a parent of type Middleware back in the chain. Example middlewares:
+Endpoints can have multiple parents of type Middleware back in The Chain. Example middlewares:
 
 - Body validation
 - Error handling
